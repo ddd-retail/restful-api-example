@@ -60,9 +60,10 @@ namespace public_api_tutorial
 
                 var counter = 0;
                 while (true)
-                {
+                { 
                     counter++;
                     Thread.Sleep(1000);
+                    // exit the loop when the target has been reached
                     if (counter >= 5)
                     {
                         break;
