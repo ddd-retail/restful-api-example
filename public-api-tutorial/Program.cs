@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -55,6 +56,18 @@ namespace public_api_tutorial
                 {
 
                     var price = sale.CostPrice;
+                }
+
+                var counter = 0;
+                while (true)
+                { 
+                    counter++;
+                    Thread.Sleep(1000);
+                    // exit the loop when the target has been reached
+                    if (counter >= 5)
+                    {
+                        break;
+                    }
                 }
             }
         }
