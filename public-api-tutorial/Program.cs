@@ -58,9 +58,15 @@ namespace public_api_tutorial
                     var price = sale.CostPrice;
                 }
 
+                var counter = 0;
                 while (true)
                 {
+                    counter++;
                     Thread.Sleep(1000);
+                    if (counter >= 5)
+                    {
+                        break;
+                    }
                 }
             }
         }
